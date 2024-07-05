@@ -1,4 +1,4 @@
-const topBarCenterText = `VA3HDL - FN04ga`;
+const topBarCenterText = `KF4EMZ - FM08nb`;
 // Menu items
 // Structure is as follows HTML Color code, Option, target URL, scaling 1=Original Size, side (optional, nothing is Left, "R" is Right)
 // The values are [color code, menu text, target link, scale factor, side],
@@ -55,10 +55,40 @@ const aURL = [
 // You can't add more items because there are only 12 placeholders on the dashboard
 // but you can replace the titles and the images with anything you want.
 const aIMG = [
-  ["RADAR", "https://radar.weather.gov/ridge/standard/CONUS_loop.gif"],
+  [
+    "Forecast",
+    "https://graphical.weather.gov/GraphicalNDFD.php?width=1080&timezone=EDT&sector=NEMETRO&element=wx&n=1",
+    "https://graphical.weather.gov/GraphicalNDFD.php?width=1080&timezone=EDT&sector=NEMETRO&element=wx&n=2",
+    "https://graphical.weather.gov/GraphicalNDFD.php?width=1080&timezone=EDT&sector=NEMETRO&element=wx&n=3",
+    "https://graphical.weather.gov/GraphicalNDFD.php?width=1080&timezone=EDT&sector=NEMETRO&element=wx&n=4",
+    "https://graphical.weather.gov/GraphicalNDFD.php?width=1080&timezone=EDT&sector=NEMETRO&element=wx&n=5",
+    "https://graphical.weather.gov/GraphicalNDFD.php?width=1080&timezone=EDT&sector=NEMETRO&element=wx&n=6",
+    "https://graphical.weather.gov/GraphicalNDFD.php?width=1080&timezone=EDT&sector=NEMETRO&element=wx&n=7",
+    "https://graphical.weather.gov/GraphicalNDFD.php?width=1080&timezone=EDT&sector=NEMETRO&element=wx&n=8",
+  ],
   [
     "LOCAL RADAR",
-    "https://radar.weather.gov/ridge/standard/KNQA_loop.gif",
+    "https://radar.weather.gov/ridge/standard/KFCX_loop.gif",
+    "https://radar.weather.gov/ridge/standard/KAKQ_loop.gif",
+    "https://radar.weather.gov/ridge/standard/CONUS_loop.gif",
+  ],
+  ["Forecast", "https://forecast.weather.gov/meteograms/Plotter.php?lat=38.076&lon=-78.9049&wfo=LWX&zcode=VAZ025&gset=18&gdiff=3&unit=0&tinfo=EY5&ahour=0&pcmd=11101111110000000000000000000000000000000000000000000000000&lg=en&indu=1!1!1!&dd=&bw=&hrspan=48&pqpfhr=6&psnwhr=6"],
+  [
+    "SATELLITE",
+    "https://cdn.star.nesdis.noaa.gov/GOES16/GLM/SECTOR/eus/EXTENT3/GOES16-EUS-EXTENT3-1000x1000.gif",
+    "https://cdn.star.nesdis.noaa.gov/GOES16/GLM/SECTOR/cgl/EXTENT3/GOES16-CGL-EXTENT3-600x600.gif",
+  ],
+  [
+    "LIGHTNING",
+    "https://images.lightningmaps.org/blitzortung/america/index.php?animation=usa",
+    "https://www.blitzortung.org/en/Images/image_b_ny.png",
+  ],
+  [
+    "Forecast",
+    "https://graphical.weather.gov/GraphicalNDFD.php?width=515&timezone=EDT&sector=CONUS&element=pop12&n=5",
+    "https://graphical.weather.gov/GraphicalNDFD.php?width=515&timezone=EDT&sector=CONUS&element=windspd&n=5",
+    "https://graphical.weather.gov/GraphicalNDFD.php?width=515&timezone=EDT&sector=CONUS&element=maxt&n=1",
+    "https://graphical.weather.gov/GraphicalNDFD.php?width=515&timezone=EDT&sector=CONUS&element=qpf&n=3",
   ],
   [
     "NOAA D-RAP",
@@ -68,22 +98,6 @@ const aIMG = [
     "ISS & RS-44 POSITION",
     "https://www.heavens-above.com/orbitdisplay.aspx?icon=iss&width=600&height=300&mode=M&satid=25544",
     "https://www.heavens-above.com/orbitdisplay.aspx?icon=default&width=600&height=300&mode=M&satid=44909",
-  ],
-  [
-    "SATELLITE CAN",
-    "https://cdn.star.nesdis.noaa.gov/GOES16/GLM/SECTOR/can/EXTENT3/GOES16-CAN-EXTENT3-1125x560.gif",
-  ],
-  [
-    "SATELLITE CGL",
-    "https://cdn.star.nesdis.noaa.gov/GOES16/GLM/SECTOR/cgl/EXTENT3/GOES16-CGL-EXTENT3-600x600.gif",
-  ],
-  [
-    "LIGHTNING",
-    "https://images.lightningmaps.org/blitzortung/america/index.php?animation=usa",
-  ],
-  [
-    "LIGHTNING LOCAL",
-    "https://www.blitzortung.org/en/Images/image_b_ny.png",
   ],
   ["GREY LINE", "https://www.timeanddate.com/scripts/sunmap.php?iso=now"],
   [
@@ -96,6 +110,3 @@ const aIMG = [
   "https://www.hamqsl.com/solar100sc.php",
   "https://www.hamqsl.com/solarpich.php"],
 ];
-
-// Image rotation intervals in milliseconds per tile - If the line below is commented, tiles will be rotated every 5000 milliseconds (5s)
-const tileDelay = [5000,4000,3000,2000,1000,6000,7000,8000,9000,8500,7500,6500];
